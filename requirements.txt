@@ -1,0 +1,19 @@
+# Core dependencies
+pydantic>=2.6
+httpx>=0.27.0
+beautifulsoup4>=4.12.3
+pandas>=2.2.2
+
+# pydantic-ai and model integrations
+pydantic-ai>=0.2.1  # Or latest version from GitHub if not on PyPI
+
+# For OpenAI model support (if used in load_models.py)
+openai>=1.25.0
+
+# Optional (if you want to use Groq, Gemini, Ollama, etc.)
+# groq>=0.3.1
+# google-generativeai>=0.3.2
+# ollama>=0.1.6
+
+# Optional: typing support for Python < 3.9
+# typing-extensions>=4.5.0
