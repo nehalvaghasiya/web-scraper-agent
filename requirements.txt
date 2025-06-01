@@ -7,7 +7,7 @@ pandas>=2.2.2
 # pydantic-ai and model integrations
 pydantic-ai>=0.2.1  # Or latest version from GitHub if not on PyPI
 
-# For OpenAI model support (if used in load_models.py)
+# For OpenAI model support
 openai>=1.25.0
 
 # Optional (if you want to use Groq, Gemini, Ollama, etc.)
