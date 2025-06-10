@@ -15,6 +15,7 @@ class Results(BaseModel):
     products: List[Product]
 
 
+# URL from which we want to extract the list of product information
 URL = "https://www.amazon.de/wireless-headphones/s?k=wireless+headphones"
 
 prompt_template = """
