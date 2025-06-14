@@ -35,7 +35,7 @@ HTML:
 URL = "https://techcrunch.com/"
 data = scrape(URL, blog_prompt, BlogFeed)
 print(data)
-# ✅ This should be the expected output format:
+# Expected output:
 # posts = [
 #     Post(
 #         title="Zevo’s EV-only car-share fleet is helping Tesla owners make money",
