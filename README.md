@@ -25,3 +25,13 @@ It’s perfect for developers and researchers who want:
 - Simple **plug-and-play examples** for scraping products, blog posts, and more
 
 > ✨ Think of it as ChatGPT meets BeautifulSoup — but with strict output validation.
+
+## Technical Architecture
+
+| Layer             | Purpose                                                                 | File                     |
+|------------------|-------------------------------------------------------------------------|--------------------------|
+| Scraping Tool     | Downloads and cleans up web page HTML                                  | `scraper.py > fetch_html_text()` |
+| Schema Wrapper    | Defines output structure with Pydantic models                          | `examples/`              |
+| Prompt Execution  | Uses Groq + Pydantic-AI to extract structured data                     | `scraper.py > scrape()`  |
+| Configuration     | Central config for model/backend/runtime params                        | `config.yaml`            |
+
