@@ -35,3 +35,23 @@ It’s perfect for developers and researchers who want:
 | Prompt Execution  | Uses Groq + Pydantic-AI to extract structured data                     | `scraper.py > scrape()`  |
 | Configuration     | Central config for model/backend/runtime params                        | `config.yaml`            |
 
+## Installation
+
+`web-scraper-agent` works with **Python 3.10 – 3.12**
+
+### Using **uv** (recommended)
+
+[`uv`](https://docs.astral.sh/uv/getting-started/features/#projects) is a Rust-powered fast dependency manager and virtual environment tool.
+
+```bash
+# 1 - Install uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# 2 - Set up and activate virtual environment
+uv venv .venv
+source .venv/bin/activate
+
+# 3 - Lock and install dependencies
+uv lock
+uv sync
+```
