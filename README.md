@@ -60,11 +60,11 @@ uv sync
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate       # Windows: .venv\Scriptsctivate
+source .venv/bin/activate       # Windows: .venv\Scripts activate
 pip install -r requirements.txt
 ```
 
-> 💡 **Groq users:** Don’t forget to export your Groq key before running:
+> **Groq users:** Don’t forget to export your Groq key before running:
 >
 > ```bash
 > export GROQ_API_KEY="sk-..."
