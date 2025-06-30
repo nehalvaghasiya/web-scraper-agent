@@ -69,3 +69,55 @@ pip install -r requirements.txt
 > ```bash
 > export GROQ_API_KEY="sk-..."
 > ```
+
+## Quick Start
+
+Here's how to use the agent with any schema and prompt.
+
+```python
+from scraper import scrape
+from pydantic import BaseModel, Field
+from typing import List
+
+class Product(BaseModel):
+    brand: str
+    name: str
+    price: str | None
+    stars: float | None
+    reviews: int | None
+
+class Results(BaseModel):
+    products: List[Product]
+
+prompt_template = """
+Extract product listings from this HTML.
+
+Return JSON in this format:
+{
+  "products": [
+    {
+      "brand": "Brand name",
+      "name": "Full title",
+      "price": "EUR 29.99",
+      "stars": 4.5,
+      "reviews": 123
+    }
+  ]
+}
+
+HTML:
+{html}
+"""
+
+url = "https://www.amazon.de/s?k=wireless+headphones"
+data = scrape(url, prompt_template, Results)
+
+# ✅ Expected output:
+# products = [
+#   Product(brand="Sony", name="WH-CH520...", price="€32.99", stars=4.5, reviews=29694),
+#   Product(brand="Anker", name="Q20i...", price="€29.99", stars=4.6, reviews=31020),
+#   ...
+# ]
+
+print(data.model_dump_json(indent=2))
+```
