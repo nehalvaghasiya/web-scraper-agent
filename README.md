@@ -121,3 +121,19 @@ data = scrape(url, prompt_template, Results)
 
 print(data.model_dump_json(indent=2))
 ```
+
+## Configuration (`config.yaml`)
+
+Control your model, generation parameters, and backend settings from a single file:
+
+```yaml
+# config.yaml
+model: "meta-llama/llama-4-scout-17b-16e-instruct"
+temperature: 0.7
+max_tokens: 1024
+base_url: "https://api.groq.com/openai/v1"
+timeout: 30
+retry_count: 3
+```
+
+> 🔐 `GROQ_API_KEY` is pulled from environment variables by default.
