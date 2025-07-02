@@ -137,3 +137,17 @@ retry_count: 3
 ```
 
 > 🔐 `GROQ_API_KEY` is pulled from environment variables by default.
+
+## Directory Tree
+
+```text
+web-scraper-agent/
+├── scraper.py                  # Core logic: fetch HTML, run model, validate schema
+├── config.yaml                 # Groq model + runtime settings
+├── requirements.txt            # pip-compatible dependencies
+├── examples/
+│   ├── extract_product.py      # Amazon product scraper
+│   ├── extract_blog.py         # Blog/news scraper (e.g., TechCrunch)
+│   └── extract_jobs.py         # (Future) Job listings or LinkedIn data
+└── README.md                   # This file
+```
