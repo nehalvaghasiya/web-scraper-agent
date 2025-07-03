@@ -11,7 +11,6 @@
 * [Quick Start](#quick-start)
 * [Troubleshooting](#troubleshooting)
 * [Directory Tree](#directory-tree)
-* [Contributing — Bugs & Feature Requests](#contributing--bugs--feature-requests)
 
 ## Overview
 
@@ -136,7 +135,7 @@ timeout: 30
 retry_count: 3
 ```
 
-> 🔐 `GROQ_API_KEY` is pulled from environment variables by default.
+> `GROQ_API_KEY` is pulled from environment variables by default.
 
 ## Directory Tree
 
@@ -147,7 +146,7 @@ web-scraper-agent/
 ├── requirements.txt            # pip-compatible dependencies
 ├── examples/
 │   ├── extract_product.py      # Amazon product scraper
-│   ├── extract_blog.py         # Blog/news scraper (e.g., TechCrunch)
-│   └── extract_jobs.py         # (Future) Job listings or LinkedIn data
+│   ├── extract_blog.py         # Blog/news scraper
+│   └── extract_jobs.py         # Job listings or LinkedIn data
 └── README.md                   # This file
 ```
